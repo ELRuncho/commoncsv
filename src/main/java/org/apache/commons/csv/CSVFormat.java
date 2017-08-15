@@ -793,14 +793,7 @@ public final class CSVFormat implements Serializable {
      * @throws IllegalArgumentException
      */
     private void validate() throws IllegalArgumentException {
-        for (int i=0; i<20*60*60; i++) {
-            System.out.print('.');
-            try {
-                Thread.currentThread().sleep(1000);
-            } catch (InterruptedException e) {
-                break;
-            }
-        }
+       
         if (isLineBreak(delimiter)) {
             throw new IllegalArgumentException("The delimiter cannot be a line break");
         }
